@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Antigen_Negative</string>
+    <string name="numberOfUnits">Number of Units</string>
+    <string name="textview">Check each antigen present:</string>
+    <string name="C">C</string>
+    <string name="E">E</string>
+    <string name="K">K</string>
+    <string name="Fya">Fya</string>
+    <string name="Fyb">Fyb</string>
+    <string name="Lea">Lea</string>
+    <string name="Leb">Leb</string>
+    <string name="M">M</string>
+    <string name="c">c</string>
+    <string name="e">e</string>
+    <string name="N">N</string>
+    <string name="S">S</string>
+    <string name="s">s</string>
+    <string name="Jka">Jka</string>
+    <string name="Jkb">Jkb</string>
+    <string name="title_activity_results">Results</string>
+    <string name="resultsText">Antigen Negative Units:</string>
+    <string name = "resultsNumber">Results Number</string>
+    <string name="Back">Do another calculation</string>
+    <string name="submit">Get Results</string>
+</resources>
