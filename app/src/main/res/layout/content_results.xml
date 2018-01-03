@@ -22,23 +22,25 @@
 
     <TextView
         android:id="@+id/resultsNumber"
-        android:layout_width="155dp"
-        android:layout_height="84dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
-        android:textStyle="bold"
+        android:textColor="@android:color/black"
 
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/resultsNumber"
+        app:layout_constraintVertical_bias="0.501"
         tools:layout_editor_absoluteY="203dp"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintVertical_bias="0.501" />
+        tools:text="@string/resultsNumber" />
 
     <TextView
         android:id="@+id/resultsText"
@@ -49,6 +51,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/resultsText"
+        android:textColor="@android:color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

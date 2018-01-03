@@ -1,318 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.kristensharkey.antigen_negative.MainActivity">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:stretchColumns="*"
+    android:weightSum="2">
 
-    <TextView
-        android:id="@+id/checkAntigens"
-        android:layout_width="139dp"
-        android:layout_height="44dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/textview"
-        android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintVertical_bias="0.124"
-        tools:ignore="UnknownId"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <CheckBox
-        android:id="@+id/C"
-        android:layout_width="51dp"
-        android:layout_height="35dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:text="@string/C"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.082"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintTop_creator="1"
-        app:layout_constraintVertical_bias="0.243" />
+    <TableRow android:minHeight="30dp">
 
-    <CheckBox
-        android:id="@+id/c"
-        android:layout_width="45dp"
-        android:layout_height="34dp"
-        android:text="@string/c"
-        android:layout_marginTop="14dp"
-        app:layout_constraintTop_toBottomOf="@+id/checkAntigens"
-        app:layout_constraintLeft_toRightOf="@+id/C"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.566"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        <TextView
+            android:id="@+id/checkAntigens"
 
-    <CheckBox
-        android:id="@+id/E"
-        android:layout_width="54dp"
-        android:layout_height="35dp"
-        android:text="@string/E"
-        tools:ignore="MissingConstraints,RtlHardcoded"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="34dp"
-        android:layout_marginTop="21dp"
-        app:layout_constraintTop_toBottomOf="@+id/C"
-        android:layout_marginStart="34dp" />
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2"
+            android:text="@string/textview"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
 
-    <CheckBox
-        android:id="@+id/K"
-        android:layout_width="52dp"
-        android:layout_height="32dp"
-        android:text="@string/K"
-        android:layout_marginTop="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.079"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.572"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+    </TableRow>
 
-    <CheckBox
-        android:id="@+id/e"
-        android:layout_width="47dp"
-        android:layout_height="36dp"
-        android:text="@string/e"
-        android:layout_marginTop="19dp"
-        app:layout_constraintTop_toBottomOf="@+id/c"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/E"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintHorizontal_bias="0.566"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+    <TableRow android:minHeight="30dp">
 
-    <CheckBox
-        android:id="@+id/N"
-        android:layout_width="50dp"
-        android:layout_height="34dp"
-        android:text="@string/N"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/M"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.691"
-        app:layout_constraintVertical_bias="0.282"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        <EditText
+            android:id="@+id/numberOfUnits"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:ems="10"
+            android:hint="@string/numberOfUnits"
+            android:inputType="number" />
+    </TableRow>
 
-    <CheckBox
-        android:id="@+id/Fya"
-        android:layout_width="66dp"
-        android:layout_height="32dp"
-        android:text="@string/Fya"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
-        app:layout_constraintVertical_bias="0.667"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+    <TableRow android:minHeight="50dp">
 
-    <CheckBox
-        android:id="@+id/S"
-        android:layout_width="49dp"
-        android:layout_height="31dp"
-        android:text="@string/S"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/E"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.081"
-        app:layout_constraintVertical_bias="0.037"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        <CheckBox
+            android:id="@+id/C"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/C"
+            android:textSize="18sp" />
 
-    <CheckBox
-        android:id="@+id/Fyb"
-        android:layout_width="62dp"
-        android:layout_height="30dp"
-        android:text="@string/Fyb"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="34dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        tools:ignore="RtlHardcoded"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintVertical_bias="0.774"
-        android:layout_marginStart="34dp"
-        android:layout_marginEnd="8dp" />
+        <CheckBox
+            android:id="@+id/c"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/c" />
+    </TableRow>
 
-    <CheckBox
-        android:id="@+id/s"
-        android:layout_width="46dp"
-        android:layout_height="36dp"
-        android:text="@string/s"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/e"
-        app:layout_constraintLeft_toRightOf="@+id/S"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.569"
-        app:layout_constraintVertical_bias="0.037"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+    <TableRow android:minHeight="50dp">
 
-    <CheckBox
-        android:id="@+id/Lea"
-        android:layout_width="64dp"
-        android:layout_height="33dp"
-        android:text="@string/Lea"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/s"
-        app:layout_constraintLeft_toRightOf="@+id/K"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.616"
-        app:layout_constraintVertical_bias="0.031"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        <CheckBox
+            android:id="@+id/E"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/E" />
 
-    <CheckBox
-        android:id="@+id/Leb"
-        android:layout_width="66dp"
-        android:layout_height="34dp"
-        android:text="@string/Leb"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/Lea"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintLeft_toRightOf="@+id/Fya"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.594"
-        app:layout_constraintVertical_bias="0.071"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        <CheckBox
+            android:id="@+id/K"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/K" />
+    </TableRow>
 
-    <CheckBox
-        android:id="@+id/M"
-        android:layout_width="53dp"
-        android:layout_height="32dp"
-        android:text="@string/M"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/Leb"
-        app:layout_constraintLeft_toRightOf="@+id/Fyb"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.566"
-        app:layout_constraintVertical_bias="0.11"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+    <TableRow android:minHeight="50dp">
 
-    <CheckBox
-        android:id="@+id/Jka"
-        android:layout_width="62dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="47dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:checked="false"
-        android:text="@string/Jka"
-        app:layout_constraintBottom_toBottomOf="@+id/Jkb"
-        app:layout_constraintHorizontal_bias="0.173"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/N"
-        app:layout_constraintTop_toBottomOf="@+id/Fyb"
-        tools:ignore="MissingConstraints" />
+        <CheckBox
+            android:id="@+id/e"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/e" />
 
-    <CheckBox
-        android:id="@+id/Jkb"
-        android:layout_width="66dp"
-        android:layout_height="32dp"
-        android:text="@string/Jkb"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/Jka"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
-        app:layout_constraintVertical_bias="0.741"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        <CheckBox
+            android:id="@+id/N"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/N" />
+    </TableRow>
 
-    <Button
-        android:id="@+id/submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="2dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/submit"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.972"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+    <TableRow android:minHeight="50dp">
 
-    <EditText
-        android:id="@+id/numberOfUnits"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/numberOfUnits"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.017" />
+        <CheckBox
+            android:id="@+id/Fya"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/Fya" />
 
-</android.support.constraint.ConstraintLayout>
+        <CheckBox
+            android:id="@+id/S"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/S" />
+    </TableRow>
+
+    <TableRow android:minHeight="50dp">
+
+        <CheckBox
+            android:id="@+id/Fyb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/Fyb" />
+
+        <CheckBox
+            android:id="@+id/s"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/s" />
+    </TableRow>
+
+    <TableRow android:minHeight="50dp">
+
+        <CheckBox
+            android:id="@+id/Lea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/Lea" />
+
+        <CheckBox
+            android:id="@+id/Leb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/Leb" />
+    </TableRow>
+
+    <TableRow android:minHeight="50dp">
+
+        <CheckBox
+            android:id="@+id/M"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/M" />
+
+        <CheckBox
+            android:id="@+id/Jka"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/Jka" />
+    </TableRow>
+
+    <TableRow android:minHeight="50dp">
+
+        <CheckBox
+            android:id="@+id/Jkb"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="@string/Jkb" />
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/submit" />
+    </TableRow>
+</TableLayout>
+
+
+
