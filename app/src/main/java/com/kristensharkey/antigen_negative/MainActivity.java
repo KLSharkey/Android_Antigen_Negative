@@ -2,8 +2,10 @@ package com.kristensharkey.antigen_negative;
 
 import android.content.Intent;
 import android.icu.text.NumberFormat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -32,8 +34,31 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //double C = 1;
                 EditText numberOfUnits = (EditText) findViewById(R.id.numberOfUnits);
+
                 String numberUnitsS = numberOfUnits.getText().toString();
+                if (TextUtils.isEmpty(numberUnitsS)) {
+                    numberOfUnits.setError("Cannot be left blank");
+                    return;
+                }
+                if(numberUnitsS.matches("0")){
+                    numberOfUnits.setError("Must be greater than 0");
+                    return;
+                }
+                /*if (numberUnitsS.equals(Integer.parseInt(numberUnitsS))){
+                    numberOfUnits.setError("Must be an integer value");
+                    return;
+                }*/
+                if (Integer.parseInt(numberUnitsS) >= 60){
+                    numberOfUnits.setError("Must be at or below 60");
+                    return;
+                }
                 int numberUnits = Integer.parseInt(numberUnitsS);
+                /*if (numberUnits <= 0){
+                    AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+                    alert.setMessage("Cannot be left blank");
+                    alert.setTitle("Error1");
+                    alert.create().show();
+                }*/
 
                 DecimalFormat format = new DecimalFormat("##.00");
 
