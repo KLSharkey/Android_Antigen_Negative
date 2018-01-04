@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
                     numberOfUnits.setError("Must be an integer value");
                     return;
                 }*/
-                if (Integer.parseInt(numberUnitsS) >= 60){
-                    numberOfUnits.setError("Must be at or below 60");
+                if (Integer.parseInt(numberUnitsS) > 50){
+                    numberOfUnits.setError("Must be at or below 50");
                     return;
                 }
                 int numberUnits = Integer.parseInt(numberUnitsS);
