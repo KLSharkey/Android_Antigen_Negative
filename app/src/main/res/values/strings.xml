@@ -18,7 +18,7 @@
     <string name="Jka">Jka</string>
     <string name="Jkb">Jkb</string>
     <string name="title_activity_results">Results</string>
-    <string name="resultsText">Antigen Negative Units:</string>
+    <string name="resultsText">Units Needed to Screen:</string>
     <string name = "resultsNumber">Results Number</string>
     <string name="Back">Do another calculation</string>
     <string name="submit">Get Results</string>
