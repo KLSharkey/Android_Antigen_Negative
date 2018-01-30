@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Antigen_Negative</string>
+    <string name="app_name">Antigen Negative Units</string>
     <string name="numberOfUnits">Number of Units</string>
     <string name="textview">Check each antigen present:</string>
     <string name="C">C</string>
